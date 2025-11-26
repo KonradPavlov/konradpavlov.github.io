@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konrad Pavlov - Epidemiologist & R Data Scientist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-category li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .tech-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .service-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 4px solid #667eea;
+        }
+        
+        .service-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            color: #764ba2;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .projects-grid, .skills-grid, .services-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: inline-block; width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3em; font-weight: bold;">KP</div>
+            <h1>Konrad Pavlov</h1>
+            <p class="subtitle">🏥 Epidemiologist | 📊 R Data Scientist | 🎯 Public Health Analytics</p>
+            <div class="contact-links">
+                <a href="mailto:pavlovkonrad@gmail.com">📧 Email</a>
+                <a href="https://github.com/konradpavlov" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/in/konradpavlov" target="_blank">💼 LinkedIn</a>
+                <a href="tel:+22901596597">📞 +229 01 59 65 97 57</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>👨‍💻 About Me</h2>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                I'm an epidemiologist from Benin with strong expertise in <strong>R programming</strong>, <strong>statistical analysis</strong>, and <strong>public health surveillance</strong>. I specialize in transforming complex health data into actionable insights through interactive dashboards and rigorous statistical analysis.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">
+                🎓 <strong>Education:</strong> Professional License in Epidemiology - ENATSE (National School of Public Health & Epidemiological Surveillance)<br>
+                🔬 <strong>Experience:</strong> Epidemiological surveillance, data quality audits, disease monitoring systems
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Analysis</h3>
+                    <ul>
+                        <li>R (Advanced)</li>
+                        <li>tidyverse, dplyr, tidyr</li>
+                        <li>ggplot2, plotly</li>
+                        <li>gtsummary, compareGroups</li>
+                        <li>Statistical modeling</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Management</h3>
+                    <ul>
+                        <li>MICE (Missing data)</li>
+                        <li>dlookr, VIM, naniar</li>
+                        <li>Data cleaning & validation</li>
+                        <li>Survey data (KoBo, ODK)</li>
+                        <li>Excel advanced</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Visualization & Reporting</h3>
+                    <ul>
+                        <li>R Shiny dashboards</li>
+                        <li>R Markdown reports</li>
+                        <li>QGIS mapping</li>
+                        <li>PowerPoint presentations</li>
+                        <li>Scientific writing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Domain Expertise</h3>
+                    <ul>
+                        <li>Biostatistics</li>
+                        <li>Epidemiology</li>
+                        <li>Public health surveillance</li>
+                        <li>Clinical data analysis</li>
+                        <li>Health systems research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🔍 Missing Data Management App</h3>
+                    <p>Advanced R Shiny application for comprehensive missing data analysis using MICE, dlookr, and multiple visualization techniques. Perfect for research data preparation.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">R Shiny</span>
+                        <span class="tech-tag">MICE</span>
+                        <span class="tech-tag">dlookr</span>
+                        <span class="tech-tag">VIM</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>📊 Statistical Analysis Portfolio</h3>
+                    <p>Complete statistical analysis workflow with publication-ready tables, bivariate analysis, and automated reporting for research papers and theses.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">gtsummary</span>
+                        <span class="tech-tag">compareGroups</span>
+                        <span class="tech-tag">ggplot2</span>
+                        <span class="tech-tag">R Markdown</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>🏥 Epidemiological Dashboard</h3>
+                    <p>Interactive health surveillance dashboard for disease monitoring and facility data visualization with real-time updates and geographic mapping.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">R Shiny</span>
+                        <span class="tech-tag">leaflet</span>
+                        <span class="tech-tag">plotly</span>
+                        <span class="tech-tag">tidyverse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💼 Services I Offer</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>📚 Statistical Analysis</h3>
+                    <p>Complete statistical analysis for thesis, dissertations, and research papers. Includes data cleaning, descriptive & bivariate analysis, publication-ready tables.</p>
+                    <p class="price">$80 - $200</p>
+                </div>
+                <div class="service-item">
+                    <h3>🧹 Data Cleaning</h3>
+                    <p>Professional data preparation, missing data handling, outlier detection, and validation with documented R scripts.</p>
+                    <p class="price">$40 - $100</p>
+                </div>
+                <div class="service-item">
+                    <h3>📈 R Shiny Dashboards</h3>
+                    <p>Interactive dashboards for health monitoring, business analytics, or survey data visualization. User-friendly and customizable.</p>
+                    <p class="price">$150 - $500</p>
+                </div>
+                <div class="service-item">
+                    <h3>📄 Automated Reports</h3>
+                    <p>R Markdown automated reporting systems for recurring analysis, weekly bulletins, or monitoring reports.</p>
+                    <p class="price">$80 - $250</p>
+                </div>
+                <div class="service-item">
+                    <h3>🎓 R Training</h3>
+                    <p>Personalized R programming training for data analysis, visualization, or Shiny dashboard development.</p>
+                    <p class="price">$25 - $40/hour</p>
+                </div>
+                <div class="service-item">
+                    <h3>🔬 Epidemiological Analysis</h3>
+                    <p>Specialized analysis for public health research, disease surveillance, or clinical trials with epidemiological measures.</p>
+                    <p class="price">$100 - $300</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: white; border: none; padding: 0;">Ready to Work Together?</h2>
+            <p style="font-size: 1.2em; margin-top: 15px;">Let's transform your data into actionable insights!</p>
+            <p style="margin-top: 10px;">Available Monday - Saturday, 8 AM - 6 PM GMT</p>
+            <a href="mailto:pavlovkonrad@gmail.com" class="cta-button">Get In Touch</a>
+        </div>
+
+        <footer>
+            <p>© 2025 Konrad Pavlov - Epidemiologist & Data Scientist</p>
+            <p style="margin-top: 10px;">📍 Bohicon, Benin | 🌍 Available for remote work worldwide</p>
+        </footer>
+    </div>
+</body>
+</html>
