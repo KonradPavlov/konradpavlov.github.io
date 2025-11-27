@@ -57,16 +57,6 @@
 
 ---
 
-## ✨ Aperçu du Portfolio
-
-Une **Single Page Application** élégante et performante, conçue pour mettre en lumière une expertise unique à l'intersection de l'épidémiologie et de la data science.
-
-| 🎨 Design & UX | 🛠️ Fonctionnalités |
-|:---|:---|
-| • Interface épurée et professionnelle<br>• Animations subtiles<br>• Palette harmonieuse (Thème Santé/Data)<br>• Navigation smooth scroll | • Hero section impactante<br>• Grille de compétences visuelle<br>• Timeline interactive du parcours<br>• Formulaire de contact intégré |
-
----
-
 ## 📋 Détails des Sections
 
 <details open>
