@@ -1,124 +1,104 @@
 <div align="center">
 
-# 🎯 Mon Portfolio 
+# Konrad Pavlov
 
-### Épidémiologiste • Data Scientist • Expert R Shiny
+### 🏥 Epidemiologist • 📊 R Data Scientist • 🎯 Public Health Analytics
 
-*Transformer les données de santé en décisions éclairées*
+*Transforming complex health data into actionable insights.*
 
 <p align="center">
   <a href="https://github.com/konradpavlov">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github"/>
   </a>
   <a href="https://linkedin.com/in/konradpavlov">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin"/>
   </a>
-  <a href="mailto:sallankonrad@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge"/>
+  <a href="mailto:pavlovkonrad@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
 </p>
 
-![Banner](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
-
 </div>
 
 ---
 
-## 👨‍💻 À Propos
+## 👨‍💻 About Me
 
-<table>
-  <tr>
-    <td width="60%">
-      <br>
-      <blockquote>
-        "Combinant rigueur scientifique et créativité technique, je conçois des solutions data-driven pour la santé publique."
-      </blockquote>
-      <br>
-      <strong>Konrad Pavlov</strong> est un professionnel passionné par l'analyse de données. Expert en épidémiologie et en développement d'applications interactives (Shiny), il aide les organisations à visualiser et interpréter leurs données complexes.
-      <br><br>
-      📍 <b>Localisation :</b> Bohicon, Zou, Bénin <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/bj.svg" width="20" alt="Benin Flag"/>
-    </td>
-    <td width="40%" align="center">
-      <h3>Mes Stack Tech</h3>
-      <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" />
-      <img src="https://img.shields.io/badge/R_Shiny-276DC3?style=flat-square&logo=r&logoColor=white" />
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-      <br>
-      <img src="https://img.shields.io/badge/Tidyverse-276DC3?style=flat-square&logo=r&logoColor=white" />
-      <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" />
-      <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-      <br>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
-      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-    </td>
-  </tr>
-</table>
+I am an epidemiologist based in **Bohicon, Benin**, with a **Professional License in Epidemiology from ENATSE** (National School of Public Health & Epidemiological Surveillance).
+
+I specialize in **R programming**, **statistical analysis**, and **public health surveillance**. My work focuses on transforming data into insights through rigorous analysis and interactive dashboards.
+
+*   **🎓 Education:** Professional License in Epidemiology (ENATSE).
+*   **🔬 Experience:** Epidemiological surveillance, data quality audits, disease monitoring systems.
+*   **🌍 Availability:** Remote work worldwide (Mon-Sat, 8 AM - 6 PM GMT).
 
 ---
 
-## 📋 Détails des Sections
+## 🛠️ Technical Stack & Skills
 
-<details open>
-<summary><b>🏠 Accueil</b></summary>
-<blockquote>
-Page d'atterrissage avec présentation dynamique, call-to-action et liens vers les réseaux professionnels.
-</blockquote>
-</details>
+My expertise is built on advanced R programming and specialized public health tools.
 
-<details>
-<summary><b>💡 Compétences Techniques</b></summary>
-<br>
-<ul>
-  <li><b>📊 Biostatistique & Modélisation :</b> GLM, Analyse de survie, Séries temporelles</li>
-  <li><b>💻 Développement :</b> Packages R, R Shiny, Automatisation Python</li>
-  <li><b>🗺️ Géomatique :</b> Cartographie sanitaire, Analyse spatiale (QGIS)</li>
-  <li><b>📈 BI & Viz :</b> ggplot2, Plotly, Highcharts, Tableaux de bord</li>
-</ul>
-</details>
-
-<details>
-<summary><b>📚 Parcours & Timeline</b></summary>
-<blockquote>
-Une visualisation chronologique détaillant ma formation académique, mes expériences sur le terrain et mes projets marquants en épidémiologie.
-</blockquote>
-</details>
-
-<details>
-<summary><b>🎯 Services Proposés</b></summary>
-<br>
-<ul>
-  <li>Analyses statistiques avancées pour thèses et articles</li>
-  <li>Création de dashboards interactifs pour le suivi épidémiologique</li>
-  <li>Nettoyage et structuration de bases de données sanitaires</li>
-  <li>Formation technique (R, Data Science)</li>
-</ul>
-</details>
+| Category | Tools & Packages |
+| :--- | :--- |
+| **📊 Analysis & Stats** | `R (Advanced)` • `tidyverse` • `gtsummary` • `compareGroups` • `Statistical Modeling` |
+| **🧹 Data Management** | **Missing Data:** `MICE` • `dlookr` • `VIM` • `naniar`<br>**Collection:** `KoBoToolbox` • `ODK` • `Excel Advanced` |
+| **📈 Visualization** | `R Shiny` • `ggplot2` • `plotly` • `QGIS` (Mapping) |
+| **📝 Reporting** | `R Markdown` • Scientific Writing • Automated Reports |
 
 ---
 
-## 📈 Statistiques GitHub
+## 💼 Services & Pricing
+
+I offer freelance services for researchers, students, and organizations.
+
+| Service | Description | Estimated Price |
+| :--- | :--- | :--- |
+| **📚 Statistical Analysis** | Thesis/Research papers. Includes cleaning, bivariate analysis, and publication-ready tables. | **$80 - $200** |
+| **🧹 Data Cleaning** | Professional preparation, missing data handling (MICE), outlier detection, and validation. | **$40 - $100** |
+| **📈 R Shiny Dashboards** | Interactive dashboards for health monitoring, business analytics, or survey data. | **$150 - $500** |
+| **📄 Automated Reports** | R Markdown systems for recurring analysis or weekly bulletins. | **$80 - $250** |
+| **🔬 Epi Analysis** | Specialized analysis for public health research and clinical trials. | **$100 - $300** |
+| **🎓 R Training** | Personalized tutoring for analysis, visualization, or Shiny. | **$25 - $40 / hour** |
+
+---
+
+## 🚀 Featured Projects
+
+### 🔍 [Missing Data Management App](https://github.com/konradpavlov)
+> **Stack:** `R Shiny` `MICE` `dlookr` `VIM`
+>
+> An advanced application for comprehensive missing data analysis using multiple imputation techniques. Designed for rigorous research data preparation.
+
+### 📊 [Statistical Analysis Portfolio](https://github.com/konradpavlov)
+> **Stack:** `gtsummary` `compareGroups` `ggplot2` `R Markdown`
+>
+> A complete workflow generating publication-ready tables and automated reports for research papers and theses.
+
+### 🏥 [Epidemiological Dashboard](https://github.com/konradpavlov)
+> **Stack:** `R Shiny` `leaflet` `plotly` `tidyverse`
+>
+> An interactive health surveillance tool for disease monitoring, featuring real-time facility data visualization and geographic mapping.
+
+---
+
+## 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=konradpavlov&show_icons=true&theme=radical&count_private=true&locale=fr" height="180" alt="Stats GitHub" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=konradpavlov&layout=compact&theme=radical&langs_count=8&locale=fr" height="180" alt="Top Langages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=konradpavlov&show_icons=true&theme=radical&count_private=true" height="180" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=konradpavlov&layout=compact&theme=radical&langs_count=8" height="180" alt="Top Languages" />
 </div>
 
 ---
 
-## 📫 Me Contacter
+## 📫 Contact
+
+Ready to transform your data into actionable insights?
+
+*   **Email:** [pavlovkonrad@gmail.com](mailto:pavlovkonrad@gmail.com)
+*   **Phone:** +229 01 59 65 97 57
+*   **LinkedIn:** [linkedin.com/in/konradpavlov](https://linkedin.com/in/konradpavlov)
+*   **Location:** Bohicon, Benin
 
 <div align="center">
-
-| Canal | Lien |
-|:-----:|:----:|
-| 📧 Email Pro | [sallankonrad@gmail.com](mailto:sallankonrad@gmail.com) |
-| 📧 Email Alt | [pavlovkonrad@gmail.com](mailto:pavlovkonrad@gmail.com) |
-| 💼 LinkedIn | [linkedin.com/in/konradpavlov](https://linkedin.com/in/konradpavlov) |
-
-<br>
-<i>N'hésitez pas à laisser une ⭐ sur ce dépôt si le projet vous plaît !</i>
-
-**© 2025 Konrad Pavlov • Fait avec ❤️ et du code**
-
+  <i>© 2025 Konrad Pavlov • Epidemiologist & Data Scientist</i>
 </div>
