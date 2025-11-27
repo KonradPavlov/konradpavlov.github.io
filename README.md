@@ -26,6 +26,7 @@ Ce portfolio est une application **Single Page Application (SPA)** développée 
 *   **Expertise :** Épidémiologiste | Data Scientist | Expert R Shiny
 *   **Localisation :** Bohicon, Zou, Bénin
 *   **Email :** [sallankonrad@gmail.com](mailto:sallankonrad@gmail.com)
+*   **Email :** [pavlovkonrad@gmail.com](mailto:pavlovkonrad@gmail.com)
 *   **LinkedIn :** [linkedin.com/in/konradpavlov](https://linkedin.com/in/konradpavlov)
 *   **GitHub :** [github.com/konradpavlov](https://github.com/konradpavlov)
 
