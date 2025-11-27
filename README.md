@@ -20,35 +20,6 @@ Ce portfolio est une application **Single Page Application (SPA)** développée 
     *   **Services :** Présentation des prestations offertes (Analyses statistiques, Création de dashboards, Formation).
     *   **Contact :** Formulaire de contact intégré et informations directes.
 
-## 🛠 Technologies Utilisées
-
-Ce projet repose sur une stack technique moderne et performante :
-
-*   **[React 19](https://react.dev/)** : Bibliothèque JavaScript pour la construction de l'interface utilisateur.
-*   **[TypeScript](https://www.typescriptlang.org/)** : Pour un code typé, plus sûr et plus maintenable.
-*   **[Tailwind CSS](https://tailwindcss.com/)** : Framework CSS utilitaire pour un design rapide et cohérent.
-*   **[Lucide React](https://lucide.dev/)** : Collection d'icônes SVG légères et personnalisables.
-
-## 📂 Structure du Code
-
-L'architecture du projet est modulaire et organisée comme suit :
-
-```text
-/
-├── index.html              # Point d'entrée HTML avec configuration Tailwind
-├── index.tsx               # Point d'entrée de l'application React
-├── App.tsx                 # Composant racine orchestrant les sections
-├── components/             # Composants réutilisables
-│   ├── Navigation.tsx      # Barre de navigation responsive
-│   ├── Hero.tsx            # Section d'en-tête (Hero banner)
-│   ├── Skills.tsx          # Affichage des compétences techniques
-│   ├── Experience.tsx      # Parcours professionnel et éducation
-│   ├── Services.tsx        # Grille des services proposés
-│   ├── Contact.tsx         # Section de contact
-│   └── Footer.tsx          # Pied de page
-└── metadata.json           # Métadonnées de configuration
-```
-
 ## 👤 Auteur et Contact
 
 **Konrad Pavlov**
