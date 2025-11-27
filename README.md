@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎯 Portfolio de Konrad Pavlov
+# 🎯 Mon Portfolio 
 
 ### Épidémiologiste • Data Scientist • Expert R Shiny
 
