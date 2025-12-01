@@ -96,7 +96,7 @@ Ready to transform your data into actionable insights?
 
 *   **Email:** [pavlovkonrad@gmail.com](mailto:pavlovkonrad@gmail.com)
 *   **Phone:** +229 01 59 65 97 57
-*   **LinkedIn:** [linkedin.com/in/konradpavlov](https://linkedin.com/in/konradpavlov)
+*   **LinkedIn:** linkedin.com/in/konradpavlov-epidemiologist/](https://linkedin.com/in/konradpavlov-epidemiologist/) 
 *   **Location:** Bohicon, Benin
 
 <div align="center">
