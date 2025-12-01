@@ -823,4 +823,5 @@ server <- function(input, output, session) {
 }
 
 # Lancer l'application
+
 shinyApp(ui = ui, server = server)
