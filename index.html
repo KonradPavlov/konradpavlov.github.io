@@ -4,276 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konrad Pavlov - Epidemiologist & R Data Scientist</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #4f46e5; /* Indigo */
+            --secondary: #7c3aed; /* Violet */
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-gray: #4b5563;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
         }
-        
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
-        
+
+        /* Header / Hero Section */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 15px;
+            background: var(--white);
+            padding: 80px 20px;
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
         }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
+
+        .profile-avatar {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px;
             border-radius: 50%;
-            border: 5px solid #667eea;
-            margin-bottom: 20px;
-            object-fit: cover;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5em;
+            font-weight: 700;
+            border: 6px solid white;
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
         }
-        
-        h1 {
-            color: #667eea;
+
+        header h1 {
+            font-size: 3em;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
-            font-size: 2.5em;
         }
-        
+
         .subtitle {
-            color: #666;
             font-size: 1.2em;
-            margin-bottom: 20px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-weight: 300;
         }
-        
-        .contact-links {
+
+        .header-actions {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
-        
-        .contact-links a {
-            color: #667eea;
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 2px solid #667eea;
-            border-radius: 25px;
-            transition: all 0.3s;
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
-        
-        .contact-links a:hover {
-            background: #667eea;
+
+        .btn-primary {
+            background: var(--gradient);
             color: white;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
         }
-        
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Section Styling */
         .section {
-            background: white;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 60px 0;
         }
-        
-        h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .skill-category {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .skill-category h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            padding: 5px 0;
-            padding-left: 20px;
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 50px;
             position: relative;
+            color: var(--dark);
         }
-        
-        .skill-category li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            margin: 15px auto 0;
+            border-radius: 2px;
         }
-        
-        .projects-grid {
+
+        /* About Section */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .detail-item strong { color: var(--primary); display: block; margin-bottom: 5px; }
+
+        /* Grid Layouts */
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 20px;
         }
-        
-        .project-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
+
+        /* Cards General */
+        .card {
+            background: var(--white);
             border-radius: 15px;
-            transition: transform 0.3s;
-            cursor: pointer;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
         }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        
-        .project-card h3 {
-            color: white;
-            margin-bottom: 15px;
+
+        /* Skills specific */
+        .skill-card { border-top: 5px solid var(--primary); }
+        .skill-card h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.4em; }
+        .skill-card ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-gray);
         }
-        
-        .project-card p {
-            margin-bottom: 15px;
-            line-height: 1.8;
+        .skill-card ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
         }
-        
-        .tech-tags {
+
+        /* Projects Specific */
+        .project-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+        }
+        .project-card h3 { color: var(--dark); margin-bottom: 15px; }
+        .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 20px;
         }
-        
-        .tech-tag {
-            background: rgba(255,255,255,0.2);
+        .tag {
+            background: rgba(79, 70, 229, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        /* Services Specific */
+        .service-card {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card h3 { color: var(--primary); margin-bottom: 15px; }
+        .price-tag {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
             padding: 5px 15px;
             border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
             font-size: 0.9em;
         }
-        
-        .services-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .service-item {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            border-top: 4px solid #667eea;
-        }
-        
-        .service-item h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .price {
-            color: #764ba2;
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        /* CTA Section */
+        .cta-box {
+            background: var(--gradient);
             color: white;
-            padding: 50px;
             text-align: center;
-            border-radius: 15px;
-            margin-top: 30px;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
         }
-        
-        .cta-button {
-            display: inline-block;
+        .cta-box h2 { color: white; margin-bottom: 15px; font-size: 2.5em; }
+        .cta-box .btn {
             background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-        
-        footer {
-            text-align: center;
-            color: white;
-            padding: 30px;
+            color: var(--primary);
             margin-top: 30px;
         }
+
+        /* Footer Modernized */
+        footer {
+            background: white;
+            padding: 50px 0;
+            margin-top: 60px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .footer-item:hover { background: #f9fafb; }
+
+        .footer-item img {
+            width: 40px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
         
+        .footer-item:hover img { transform: scale(1.1); }
+
+        .footer-item b {
+            display: block;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .footer-item a, .footer-item span {
+            color: var(--text-gray);
+            font-size: 0.95em;
+        }
+        
+        .footer-item a:hover { color: var(--primary); }
+
+        .capsule-img {
+            display: block;
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .section {
-                padding: 20px;
-            }
-            
-            .projects-grid, .skills-grid, .services-list {
-                grid-template-columns: 1fr;
-            }
+            header h1 { font-size: 2.2em; }
+            .section-title { font-size: 1.8em; }
+            .about-details { flex-direction: column; align-items: center; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div style="display: inline-block; width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3em; font-weight: bold;">KP</div>
+
+    <header>
+        <div class="container">
+            <div class="profile-avatar">KP</div>
             <h1>Konrad Pavlov</h1>
             <p class="subtitle">🏥 Epidemiologist | 📊 R Data Scientist | 🎯 Public Health Analytics</p>
-            <div class="contact-links">
-                <a href="mailto:pavlovkonrad@gmail.com">📧 Email</a>
-                <a href="https://github.com/konradpavlov" target="_blank">💻 GitHub</a>
-                <a href="https://linkedin.com/in/konradpavlov" target="_blank">💼 LinkedIn</a>
-                <a href="tel:+22901596597">📞 +229 01 59 65 97 57</a>
+            
+            <div class="header-actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="mailto:pavlovkonrad@gmail.com" class="btn btn-outline">Contact Me</a>
             </div>
-        </header>
-
-        <div class="section">
-            <h2>👨‍💻 About Me</h2>
-            <p style="font-size: 1.1em; line-height: 1.8;">
-                I'm an epidemiologist from Benin with strong expertise in <strong>R programming</strong>, <strong>statistical analysis</strong>, and <strong>public health surveillance</strong>. I specialize in transforming complex health data into actionable insights through interactive dashboards and rigorous statistical analysis.
-            </p>
-            <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">
-                🎓 <strong>Education:</strong> Professional License in Epidemiology - ENATSE (National School of Public Health & Epidemiological Surveillance)<br>
-                🔬 <strong>Experience:</strong> Epidemiological surveillance, data quality audits, disease monitoring systems
-            </p>
         </div>
+    </header>
 
-        <div class="section">
-            <h2>🛠️ Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">👨‍💻 About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm an epidemiologist from Benin with strong expertise in <strong>R programming</strong>, <strong>statistical analysis</strong>, and <strong>public health surveillance</strong>. I specialize in transforming complex health data into actionable insights through interactive dashboards and rigorous statistical analysis.
+                </p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <strong>🎓 Education</strong>
+                        Professional License in Epidemiology<br>
+                        <span style="font-size:0.9em; color:#666">ENATSE (National School of Public Health)</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>🔬 Experience</strong>
+                        Epidemiological Surveillance<br>
+                        Data Quality Audits<br>
+                        Disease Monitoring Systems
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">🛠️ Technical Skills</h2>
+            <div class="grid-container">
+                <div class="card skill-card">
                     <h3>Programming & Analysis</h3>
                     <ul>
                         <li>R (Advanced)</li>
@@ -283,7 +385,7 @@
                         <li>Statistical modeling</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="card skill-card">
                     <h3>Data Management</h3>
                     <ul>
                         <li>MICE (Missing data)</li>
@@ -293,7 +395,7 @@
                         <li>Excel advanced</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="card skill-card">
                     <h3>Visualization & Reporting</h3>
                     <ul>
                         <li>R Shiny dashboards</li>
@@ -303,7 +405,7 @@
                         <li>Scientific writing</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="card skill-card">
                     <h3>Domain Expertise</h3>
                     <ul>
                         <li>Biostatistics</li>
@@ -314,91 +416,139 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>🚀 Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>🔍 Missing Data Management App</h3>
-                    <p>Advanced R Shiny application for comprehensive missing data analysis using MICE, dlookr, and multiple visualization techniques. Perfect for research data preparation.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">R Shiny</span>
-                        <span class="tech-tag">MICE</span>
-                        <span class="tech-tag">dlookr</span>
-                        <span class="tech-tag">VIM</span>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">🚀 Featured Projects</h2>
+            <div class="grid-container">
+                <div class="card project-card">
+                    <h3>🔍 Missing Data App</h3>
+                    <p>Advanced R Shiny application for comprehensive missing data analysis using MICE, dlookr, and multiple visualization techniques.</p>
+                    <div class="tech-stack">
+                        <span class="tag">R Shiny</span>
+                        <span class="tag">MICE</span>
+                        <span class="tag">dlookr</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>📊 Statistical Analysis Portfolio</h3>
-                    <p>Complete statistical analysis workflow with publication-ready tables, bivariate analysis, and automated reporting for research papers and theses.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">gtsummary</span>
-                        <span class="tech-tag">compareGroups</span>
-                        <span class="tech-tag">ggplot2</span>
-                        <span class="tech-tag">R Markdown</span>
+                <div class="card project-card">
+                    <h3>📊 Statistical Portfolio</h3>
+                    <p>Complete statistical analysis workflow with publication-ready tables, bivariate analysis, and automated reporting for research.</p>
+                    <div class="tech-stack">
+                        <span class="tag">gtsummary</span>
+                        <span class="tag">ggplot2</span>
+                        <span class="tag">R Markdown</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>🏥 Epidemiological Dashboard</h3>
-                    <p>Interactive health surveillance dashboard for disease monitoring and facility data visualization with real-time updates and geographic mapping.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">R Shiny</span>
-                        <span class="tech-tag">leaflet</span>
-                        <span class="tech-tag">plotly</span>
-                        <span class="tech-tag">tidyverse</span>
+                <div class="card project-card">
+                    <h3>🏥 Epi Dashboard</h3>
+                    <p>Interactive health surveillance dashboard for disease monitoring and facility data visualization with real-time updates.</p>
+                    <div class="tech-stack">
+                        <span class="tag">R Shiny</span>
+                        <span class="tag">leaflet</span>
+                        <span class="tag">plotly</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>💼 Services I Offer</h2>
-            <div class="services-list">
-                <div class="service-item">
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2 class="section-title">💼 Services I Offer</h2>
+            <div class="grid-container">
+                <div class="card service-card">
                     <h3>📚 Statistical Analysis</h3>
-                    <p>Complete statistical analysis for thesis, dissertations, and research papers. Includes data cleaning, descriptive & bivariate analysis, publication-ready tables.</p>
-                    <p class="price">$80 - $200</p>
+                    <p>Complete analysis for thesis & research papers. Cleaning, descriptive & bivariate analysis.</p>
+                    <span class="price-tag">$80 - $200</span>
                 </div>
-                <div class="service-item">
+                <div class="card service-card">
                     <h3>🧹 Data Cleaning</h3>
-                    <p>Professional data preparation, missing data handling, outlier detection, and validation with documented R scripts.</p>
-                    <p class="price">$40 - $100</p>
+                    <p>Professional preparation, missing data handling, outlier detection with R scripts.</p>
+                    <span class="price-tag">$40 - $100</span>
                 </div>
-                <div class="service-item">
+                <div class="card service-card">
                     <h3>📈 R Shiny Dashboards</h3>
-                    <p>Interactive dashboards for health monitoring, business analytics, or survey data visualization. User-friendly and customizable.</p>
-                    <p class="price">$150 - $500</p>
+                    <p>Interactive dashboards for health monitoring or business analytics.</p>
+                    <span class="price-tag">$150 - $500</span>
                 </div>
-                <div class="service-item">
+                <div class="card service-card">
                     <h3>📄 Automated Reports</h3>
-                    <p>R Markdown automated reporting systems for recurring analysis, weekly bulletins, or monitoring reports.</p>
-                    <p class="price">$80 - $250</p>
+                    <p>R Markdown automated reporting systems for recurring analysis.</p>
+                    <span class="price-tag">$80 - $250</span>
                 </div>
-                <div class="service-item">
+                <div class="card service-card">
                     <h3>🎓 R Training</h3>
-                    <p>Personalized R programming training for data analysis, visualization, or Shiny dashboard development.</p>
-                    <p class="price">$25 - $40/hour</p>
+                    <p>Personalized R programming training for analysis or visualization.</p>
+                    <span class="price-tag">$25 - $40/hour</span>
                 </div>
-                <div class="service-item">
-                    <h3>🔬 Epidemiological Analysis</h3>
-                    <p>Specialized analysis for public health research, disease surveillance, or clinical trials with epidemiological measures.</p>
-                    <p class="price">$100 - $300</p>
+                <div class="card service-card">
+                    <h3>🔬 Epi Analysis</h3>
+                    <p>Specialized analysis for public health research and disease surveillance.</p>
+                    <span class="price-tag">$100 - $300</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="cta-section">
-            <h2 style="color: white; border: none; padding: 0;">Ready to Work Together?</h2>
-            <p style="font-size: 1.2em; margin-top: 15px;">Let's transform your data into actionable insights!</p>
-            <p style="margin-top: 10px;">Available Monday - Saturday, 8 AM - 6 PM GMT</p>
-            <a href="mailto:pavlovkonrad@gmail.com" class="cta-button">Get In Touch</a>
-        </div>
+        <!-- CTA Section -->
+        <section class="cta-box">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's transform your data into actionable insights!</p>
+            <p style="opacity: 0.9; margin-top: 10px; font-size: 0.9em;">Available Monday - Saturday, 8 AM - 6 PM GMT</p>
+            <a href="mailto:pavlovkonrad@gmail.com" class="btn">Get In Touch</a>
+        </section>
 
-        <footer>
-            <p>© 2025 Konrad Pavlov - Epidemiologist & Data Scientist</p>
-            <p style="margin-top: 10px;">📍 Bohicon, Benin | 🌍 Available for remote work worldwide</p>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-header">
+                **Ready to transform your data into actionable insights?**
+            </div>
+            
+            <div class="footer-grid">
+                <!-- Email -->
+                <div class="footer-item">
+                    <img src="https://img.icons8.com/fluency/48/000000/gmail.png" alt="Email"/><br>
+                    <b>Email</b>
+                    <a href="mailto:pavlovkonrad@gmail.com">pavlovkonrad@gmail.com</a>
+                </div>
+
+                <!-- Phone -->
+                <div class="footer-item">
+                    <img src="https://img.icons8.com/fluency/48/000000/phone.png" alt="Phone"/><br>
+                    <b>Phone</b>
+                    <span>+229 01 59 65 97 57</span>
+                </div>
+
+                <!-- LinkedIn (CORRECTED) -->
+                <div class="footer-item">
+                    <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"/><br>
+                    <b>LinkedIn</b>
+                    <a href="https://www.linkedin.com/in/konradpavlov-epidemiologist/" target="_blank">@konradpavlov</a>
+                </div>
+
+                <!-- Location -->
+                <div class="footer-item">
+                    <img src="https://img.icons8.com/fluency/48/000000/marker.png" alt="Location"/><br>
+                    <b>Location</b>
+                    <span>Bohicon, Benin 🇧🇯</span>
+                </div>
+            </div>
+
+            <!-- Stars Request -->
+            <div style="text-align: center; margin-top: 40px; color: var(--dark);">
+                <h3>⭐ If you find my work interesting, consider giving a star to my repositories!</h3>
+            </div>
+
+            <!-- Footer Graphic -->
+            <img class="capsule-img" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="Footer Wave"/>
+
+            <div class="copyright">
+                <i>© 2025 Konrad Pavlov • Epidemiologist & Data Scientist</i>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
