@@ -1,104 +1,148 @@
-<div align="center">
+# PavStat 📊
 
-# Konrad Pavlov
+> **Tableaux statistiques et épidémiologiques de qualité publication en Python**  
+> L'équivalent complet et documenté en Python des packages R incontournables : **`compareGroups`**, **`gtsummary`** (`tbl_summary`) et **`epitools`**.
 
-### 🏥 Epidemiologist • 📊 R Data Scientist • 🎯 Public Health Analytics
-
-*Transforming complex health data into actionable insights.*
-
-<p align="center">
-  <a href="https://github.com/konradpavlov">
-    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github"/>
-  </a>
-  <a href="https://www.linkedin.com/in/konradpavlov-epidemiologist/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin"/>
-  </a>
-  <a href="mailto:pavlovkonrad@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-</p>
-
-</div>
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Biostatistics](https://img.shields.io/badge/Domain-Biostatistics%20%26%20Epidemiology-green.svg)]()
 
 ---
 
-## 👨‍💻 About Me
+## 🎯 Pourquoi PavStat ?
 
-I am an epidemiologist based in **Bohicon, Benin**, with a **Professional License in Epidemiology from ENATSE** (National School of Public Health & Epidemiological Surveillance).
+Dans la recherche médicale, clinique et épidémiologique, la création de la fameuse **Table 1** (caractéristiques démographiques et cliniques) et des **tableaux bivariés avec Odds Ratios / Risques Relatifs / Rapports de Prévalence** nécessite souvent de passer par R.
 
-I specialize in **R programming**, **statistical analysis**, and **public health surveillance**. My work focuses on transforming data into insights through rigorous analysis and interactive dashboards.
-
-*   **🎓 Education:** Professional License in Epidemiology (ENATSE).
-*   **🔬 Experience:** Epidemiological surveillance, data quality audits, disease monitoring systems.
-*   **🌍 Availability:** Remote work worldwide (Mon-Sat, 8 AM - 6 PM GMT).
-
----
-
-## 🛠️ Technical Stack & Skills
-
-My expertise is built on advanced R programming and specialized public health tools.
-
-| Category | Tools & Packages |
-| :--- | :--- |
-| **📊 Analysis & Stats** | `R (Advanced)` • `tidyverse` • `gtsummary` • `compareGroups` • `Statistical Modeling` |
-| **🧹 Data Management** | **Missing Data:** `MICE` • `dlookr` • `VIM` • `naniar`<br>**Collection:** `KoBoToolbox` • `ODK` • `Excel Advanced` |
-| **📈 Visualization** | `R Shiny` • `ggplot2` • `plotly` • `QGIS` (Mapping) |
-| **📝 Reporting** | `R Markdown` • Scientific Writing • Automated Reports |
+`PavStat` apporte enfin à la communauté Python un outil tout-en-un, rigoureux et automatisé :
+- **Décision statistique intelligente** : Détection automatique des variables continues vs catégorielles, et sélection robuste des tests paramétriques (Student, ANOVA) ou non-paramétriques (Mann-Whitney, Kruskal-Wallis).
+- **Mesures d'association épidémiologiques** : Calcul vectorisé des **Risques Relatifs (RR)**, **Rapports de Prévalence (RP)** et **Odds Ratios (OR)** avec intervalles de confiance à 95% (méthode de Wald) et $p$-values exactes mid-$p$ (alignées sur `epitools`).
+- **Prise en charge des variables continues dans les modèles logistiques** : Calcul de l'OR par unité continue comme dans `compareGroups(show.ratio=TRUE)`.
+- **Préservation stricte des facteurs** : Respect de l'ordre d'origine des catégories (`pd.Categorical`) ou de l'ordre naturel d'apparition (évite l'inversion silencieuse des niveaux de référence).
+- **Exportation Publication-Ready en un clic** :
+  - 📝 **Markdown** (GitHub / Jupyter / Quarto) avec préservation des zéros décimaux (`0.010`, `1.00`).
+  - 📄 **Microsoft Word (`.docx`)** avec en-têtes ombrés, styles médicaux et bordures professionnelles.
+  - 🌐 **HTML interactif & stylisé** prêt à être intégré dans des rapports ou des applications web.
 
 ---
 
-## 💼 Services & Pricing
+## 📦 Installation
 
-I offer freelance services for researchers, students, and organizations.
+```bash
+pip install PavStat
+```
 
-| Service | Description | Estimated Price |
-| :--- | :--- | :--- |
-| **📚 Statistical Analysis** | Thesis/Research papers. Includes cleaning, bivariate analysis, and publication-ready tables. | **$80 - $200** |
-| **🧹 Data Cleaning** | Professional preparation, missing data handling (MICE), outlier detection, and validation. | **$40 - $100** |
-| **📈 R Shiny Dashboards** | Interactive dashboards for health monitoring, business analytics, or survey data. | **$150 - $500** |
-| **📄 Automated Reports** | R Markdown systems for recurring analysis or weekly bulletins. | **$80 - $250** |
-| **🔬 Epi Analysis** | Specialized analysis for public health research and clinical trials. | **$100 - $300** |
-| **🎓 R Training** | Personalized tutoring for analysis, visualization, or Shiny. | **$25 - $40 / hour** |
-
----
-
-## 🚀 Featured Projects
-
-### 🔍 [Missing Data Management App](https://github.com/konradpavlov)
-> **Stack:** `R Shiny` `MICE` `dlookr` `VIM`
->
-> An advanced application for comprehensive missing data analysis using multiple imputation techniques. Designed for rigorous research data preparation.
-
-### 📊 [Statistical Analysis Portfolio](https://github.com/konradpavlov)
-> **Stack:** `gtsummary` `compareGroups` `ggplot2` `R Markdown`
->
-> A complete workflow generating publication-ready tables and automated reports for research papers and theses.
-
-### 🏥 [Epidemiological Dashboard](https://github.com/konradpavlov)
-> **Stack:** `R Shiny` `leaflet` `plotly` `tidyverse`
->
-> An interactive health surveillance tool for disease monitoring, featuring real-time facility data visualization and geographic mapping.
+*Ou directement depuis le dépôt source :*
+```bash
+git clone https://github.com/votre-compte/PavStat.git
+cd PavStat
+pip install .
+```
 
 ---
 
-## 📈 GitHub Stats
+## 🚀 Guide de démarrage rapide
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=konradpavlov&show_icons=true&theme=radical&count_private=true" height="180" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=konradpavlov&layout=compact&theme=radical&langs_count=8" height="180" alt="Top Languages" />
-</div>
+### 1. Tableau Descriptif Univarié (Table 1)
+
+```python
+import pandas as pd
+import Pav as pv
+
+# Charger vos données cliniques / d'enquête
+df = pd.read_excel("hdv2003.xlsx")
+
+# Tableau 1 descriptif
+tab1 = pv.describe_table(df, vars=["age", "sexe", "sport", "qualif"])
+print(pv.to_markdown(tab1, title="Caractéristiques de la population"))
+```
+
+### 2. Tableau Comparatif Bivarié (avec Risques Relatifs ou Odds Ratios)
+
+```python
+# Comparaison selon le sexe avec Risques Relatifs (RR) et IC95%
+tab_rr = pv.compare_table(
+    df,
+    group="sexe",
+    vars=["sport", "cinema", "nivetud"],
+    ratio="RR"
+)
+print(pv.to_markdown(tab_rr, title="Comparaison par sexe (RR)"))
+
+# Comparaison avec Odds Ratios (OR) pour variables qualitatives et quantitatives
+tab_or = pv.compare_table(
+    df,
+    group="sexe",
+    vars=["age", "trav.satisf"],
+    ratio="OR"
+)
+print(pv.to_markdown(tab_or, title="Comparaison par sexe (OR)"))
+```
+
+### 3. Comparaison multi-groupes (>2 groupes)
+
+```python
+# ANOVA / Kruskal-Wallis et Chi-2 automatiques
+tab_multi = pv.compare_table(
+    df,
+    group="qualif",
+    vars=["age", "sport"]
+)
+print(pv.to_markdown(tab_multi, title="Comparaison selon la qualification professionnelle"))
+```
+
+### 4. Exportation en Word (.docx), HTML et Markdown
+
+```python
+# Export vers un document Word soigné pour votre manuscrit / thèse
+pv.to_docx(
+    tab_rr,
+    path="Tableau_1_Publication.docx",
+    title="Tableau 1 : Analyse bivariée selon le sexe",
+    footnote="RR = Risque Relatif (Wald) ; IC95% ; p.ratio = test exact mid-p ; p.overall = test du Chi-2."
+)
+
+# Export vers une page HTML
+pv.to_html(
+    tab_rr,
+    path="Tableau_1.html",
+    title="Tableau 1 : Analyse bivariée selon le sexe"
+)
+```
 
 ---
 
-## 📫 Contact
+## 📊 Tableau de correspondance des tests statistiques
 
-Ready to transform your data into actionable insights?
+| Type de variable | 2 groupes (binaire) | > 2 groupes (multi-groupes) | Paramètres / Options |
+| :--- | :--- | :--- | :--- |
+| **Quantitative Normale** | Test $t$ de Welch (`stats.ttest_ind`) | ANOVA à 1 facteur (`stats.f_oneway`) | `method="param"` ou auto |
+| **Quantitative Asymétrique** | Test de Mann-Whitney $U$ | Test de Kruskal-Wallis | `method="non-param"` ou auto |
+| **Qualitative / Binaire** | Test du Chi-2 / Test exact de Fisher | Test du Chi-2 (avec Monte-Carlo optionnel) | `chisq_test2()` |
+| **Mesures d'association** | **RR**, **OR**, **RP** (IC95% Wald + mid-$p$) | Tests globaux $p.	ext{overall}$ | `ratio="RR"` ou `"OR"` ou `"RP"` |
 
-*   **Email:** [pavlovkonrad@gmail.com](mailto:pavlovkonrad@gmail.com)
-*   **Phone:** +229 01 59 65 97 57
-*   **LinkedIn:** (https://linkedin.com/in/konradpavlov-epidemiologist/) 
-*   **Location:** Bohicon, Benin
+---
 
-<div align="center">
-  <i>© 2025 Konrad Pavlov • Epidemiologist & Data Scientist</i>
-</div>
+## 🧪 Validation & Tests
+
+Le package est testé systématiquement contre les packages R de référence (`compareGroups 4.9.0`, `gtsummary 2.0`, `epitools 0.5-10.1`).
+
+Pour exécuter la suite de tests automatisée :
+```bash
+pytest tests/
+```
+
+---
+
+## 👤 Auteur & Conception
+
+**SALLAN Konrad Pavlov**  
+*Épidémiologiste & Data Analyst (R et Python)*  
+Spécialiste de l'analyse biostatistique, des études épidémiologiques et de l'automatisation des rapports de recherche clinique.
+
+---
+
+## 📄 Licence
+
+**Concepteur & Auteur principal :** SALLAN Konrad Pavlov
+
+Ce projet est sous licence libre **MIT**. Vous êtes libre de l'utiliser, de le modifier et de l'intégrer dans vos travaux de recherche et projets professionnels.
